@@ -1,0 +1,20 @@
+prototype(TC.FormFinisher.JsonStore:Finisher.Definition) < prototype(Neos.Form.Builder:Finisher.Definition) {
+    formElementType = 'TC.FormFinisher.JsonStore:Finisher'
+
+    options {
+        storeLabel = 'JsonStore label'
+        storeType = 'ch.techniconcept.form-finisher.jsonstore'
+    }
+}
+
+prototype(Neos.Form.Builder:NodeBasedFinisherCollection) {
+    itemRenderer {
+        jsonStoreFinisher {
+            @position = 'start'
+            condition = ${q(finisherNode).is('[instanceof TC.FormFinisher.JsonStore:Finisher]')}
+            renderer = Neos.Form.Builder:NodeBasedFinisher {
+                type = 'TC.FormFinisher.JsonStore:Finisher.Definition'
+            }
+        }
+    }
+}

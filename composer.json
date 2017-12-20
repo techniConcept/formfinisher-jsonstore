@@ -1,0 +1,23 @@
+{
+    "name": "techniconcept/formfinisher-jsonstore",
+    "description": "Neos.Form finisher to store form data in database",
+    "type": "neos-package",
+    "license": "MIT",
+    "require": {
+        "ttree/jsonstore": "^2.0.0",
+        "neos/form-builder": "^1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TC\\FormFinisher\\JsonStore\\": "Classes/"
+        }
+    },
+    "suggest": {
+        "neos/form-fusionrenderer": "Flow Form Framework preset for Fusion based Form rendering"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "TC.FormFinisher.JsonStore"
+        }
+    }
+}

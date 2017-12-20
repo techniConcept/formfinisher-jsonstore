@@ -1,0 +1,17 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        'TC.FormFinisher.JsonStore': true
+    userInterface:
+      translation:
+        autoInclude:
+          'TC.FormFinisher.JsonStore':
+            - 'NodeTypes/*'
+  Form:
+    presets:
+      default:
+        finisherPresets:
+          'TC.FormFinisher.JsonStore:Finisher':
+            implementationClassName: TC\FormFinisher\JsonStore\Finishers\JsonStoreFinisher
+            options: {  }
